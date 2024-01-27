@@ -7,7 +7,7 @@ class User < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :department
 
-  #空の投稿を保存できないようにする
+  # 空の投稿を保存できないようにする
   with_options presence: true do
     validates :email
     validates :password
@@ -20,10 +20,9 @@ class User < ApplicationRecord
     validates :last_name
   end
 
-  #所属部署の選択が「---」の時は保存できないようにする
-  validates :department_id, numericality: { other_than: 1 , message: "can't be blank"}
+  # 所属部署の選択が「---」の時は保存できないようにする
+  validates :department_id, numericality: { other_than: 1, message: "can't be blank" }
 
   PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i
   validates_format_of :password, with: PASSWORD_REGEX, message: 'には英字と数字の両方を含めて設定してください'
-
 end

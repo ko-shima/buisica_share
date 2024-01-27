@@ -14,9 +14,9 @@ class Department < ActiveHash::Base
     { id: 12, name: '営業部 第２課' },
     { id: 13, name: '製造部 第１課' },
     { id: 14, name: '製造部 第２課' },
-    { id: 15, name: '研究開発部' },
+    { id: 15, name: '研究開発部' }
   ]
 
   include ActiveHash::Associations
   has_many :users
-  end
+end
