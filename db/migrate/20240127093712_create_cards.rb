@@ -7,7 +7,7 @@ class CreateCards < ActiveRecord::Migration[7.0]
       t.string  :client_email,        null: false
       t.string  :client_department,   null: false
       t.string  :client_phone_number, null: false
-      t.text    :description,         null: false
+      t.text    :description
       t.references :user,             null: false, foreign_key: true
       t.timestamps
     end

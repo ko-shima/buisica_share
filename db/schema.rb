@@ -46,7 +46,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_01_28_115924) do
     t.string "client_email", null: false
     t.string "client_department", null: false
     t.string "client_phone_number", null: false
-    t.text "description", null: false
+    t.text "description"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
