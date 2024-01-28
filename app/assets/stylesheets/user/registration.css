@@ -66,14 +66,6 @@
   margin-top: 3px;
 }
 
-.form-info-header {
-  font-weight: bold;
-}
-
-.form-info-text {
-  font-size: 15px;
-}
-
 .input-name-wrap {
   display: flex;
   justify-content: center;
@@ -105,11 +97,6 @@
   resize: none;
 
 }
-
-.field_with_errors {
-  display: contents;
-}
-
 
 .register-btn {
   width: 50%;
