@@ -15,7 +15,6 @@ class CardsController < ApplicationController
   def edit
   end
 
-
   def create
     @card = Card.new(card_params)
     if @card.save
@@ -28,11 +27,11 @@ class CardsController < ApplicationController
   private
 
   def card_params
-    params.require(:card).permit(:client_last_name, :client_first_name, :company_name, :client_email, :client_department, :client_phone_number ,:description, :image).merge(user_id: current_user.id)
+    params.require(:card).permit(:client_last_name, :client_first_name, :company_name, :client_email, :client_department,
+                                 :client_phone_number, :description, :image).merge(user_id: current_user.id)
   end
 
   def set_item
     @card = Card.find(params[:id])
   end
-
 end
