@@ -4,26 +4,25 @@
   <%# 名刺一覧 %>
   <div class='card-contents'>
     <h2 class='title'>名刺一覧ページ</h2>
-
-    </div>
     <ul class='card-lists'>
-
       <% @cards.each do |card| %>
         <li class='list'>
           <%= link_to card_path(card.id) do %>
-          <div class='card-img-content'>
-            <%= image_tag card.image.variant(resize: '500x500'), class: "card-img" if card.image.attached?%>
-          </div>
-
-          <div class='card-info'>
-            <h3 class='card-name'>
-              <%= card.client_last_name + "さま" %>
-            </h3>
-            <div class='company-name'>
-              <%= card.company_name %>
+            <div class='card-img-content'>
+              <%= image_tag card.image.variant(resize: '250x250'), class: "card-img" if card.image.attached? %>
             </div>
-          </div>
+            <div class='card-info'>
+              <h3 class='card-name'>
+                <%= card.client_last_name + "さま" %>
+              </h3>
+              <div class='company-name'>
+                <%= card.company_name %>
+              </div>
+            </div>
           <% end %>
+          <div class='post-name'>
+            <%= "投稿者：" + card.user.last_name %>
+          </div>
         </li>
       <% end %>
     </ul>
@@ -33,4 +32,4 @@
   <%= link_to(new_card_path, data: { turbo: false }, class: 'post-btn') do %>
   <span class='post-btn-text'>名刺を投稿</span>
   <%= image_tag "icon_post.png" , size: '185x50' ,class: "post-btn-icon" %>
-<% end %>
+  <% end %>

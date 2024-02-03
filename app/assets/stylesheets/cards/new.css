@@ -12,6 +12,7 @@
   text-align: center;
   font-size: 22px;
   font-weight: bold;
+  border-bottom: 3px solid #b2d5de;
 }
 
 .card-post-main {

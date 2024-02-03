@@ -1,12 +1,37 @@
-.title {
-  line-height: 100px;
-  border-bottom: 4px solid #f5f5f5;
-  font-weight: bold;
+.card-contents {
   text-align: center;
 }
 
+.title {
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+    border-bottom: 3px solid #b2d5de;
+}
+
+.card-lists {
+  display: flex;
+  justify-content:center;
+  align-items: center; /* 縦方向の中央揃えを追加 */
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+
 .list {
-  width: 400px;
-  height: 300px;
-  background-color: aquamarine;
+  width: 300px;
+  margin-right: 20px; /* 横方向の余白を調整 */
+  margin-bottom: 20px;
+}
+
+
+
+.card-info {
+  text-align: center;
+}
+
+.post-name {
+  text-align: center;
+  margin-top: 5px;
+  font-size: 14px;
 }
