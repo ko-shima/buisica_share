@@ -1,4 +1,4 @@
-.purchase-btn {
+.post-btn {
   width: 120px;
   background: rgba(112, 225, 104, 0.811);
   text-align: center;
@@ -9,7 +9,7 @@
   padding: 15px;
 }
 
-.purchase-btn-text {
+.post-btn-text {
   color: black;
   display: block;
   font-size: 18px;
@@ -18,6 +18,6 @@
   font-weight: bold;
 }
 
-.purchase-btn-icon {
+.post-btn-icon {
   width: 60%;
 }

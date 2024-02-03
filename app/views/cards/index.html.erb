@@ -1,12 +1,10 @@
 <%= render "shared/header" %> 
 
 
-
   <%# 名刺一覧 %>
   <div class='card-contents'>
     <h2 class='title'>名刺一覧ページ</h2>
-    <div class="subtitle" >
-      シェアする名刺
+
     </div>
     <ul class='card-lists'>
 
@@ -32,7 +30,7 @@
   </div>
   <%# /名刺一覧 %>
 
-  <%= link_to(new_card_path, data: { turbo: false }, class: 'purchase-btn') do %>
-  <span class='purchase-btn-text'>名刺を投稿</span>
-  <%= image_tag "icon_post.png" , size: '185x50' ,class: "purchase-btn-icon" %>
+  <%= link_to(new_card_path, data: { turbo: false }, class: 'post-btn') do %>
+  <span class='post-btn-text'>名刺を投稿</span>
+  <%= image_tag "icon_post.png" , size: '185x50' ,class: "post-btn-icon" %>
 <% end %>
