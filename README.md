@@ -77,9 +77,10 @@ has_many :comments
 | client_last_name    | string     | null: false                    |
 | client_first_name   | string     | null: false                    |
 | company_name        | string     | null: false                    |
+| client_email        | string     | null: false                    |
 | client_department   | string     | null: false                    |
 | client_phone_number | string     | null: false                    |
-| description         | tex  t     | null: false                    |
+| description         | text       | null: false                    |
 | user                | references | null: false, foreign_key: true |
 
 ### Association
