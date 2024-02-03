@@ -1,4 +1,140 @@
-.card-post-header {
-  margin-top: 1vh;
+.card-post-contents {
+  background-color: #f5f5f5;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-width: 500px;
+}
+
+.card-post-title {
+  margin-top: 5px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.card-post-main {
+  background-color: #FFF;
+  width: 70vw;
+  min-width: 450px;
+  padding: 5vh 15vw;
+}
+
+/* 共通 */
+.indispensable {
+  background: #ea352d;
+  margin-left: 8px;
+  padding: 3px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.weight-bold-text {
+  font-weight: bold;
+  min-width: 170px;
+  margin-bottom: 10px;
+}
+
+.cards-text {
+  width: 100%;
+  padding: 8px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  resize: none;
+}
+/* /共通 */
+
+/* 商品画像 */
+.img-upload {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 2vh 0;
+}
+
+.click-upload {
+  margin: 15px 0;
+  min-width: 250px;
+}
+
+.click-upload>p {
+  margin-bottom: 15px;
+}
+/* /商品画像 */
+
+/* 会社名 */
+
+.client-company-name {
+  padding: 2vh 0;
+}
+/* /会社名 */
+
+/* 部署名 */
+.client-department {
+  padding: 2vh 0;
+}
+/* /部署名 */
+
+/* 担当者名 */
+.client-name {
+  padding: 2vh 0;
+}
+
+.client-name-form{
+  display: flex;
+  gap: 50px;
+}
+/* /担当者名 */
+
+/* メールアドレス */
+.client-email {
+  padding: 2vh 0;
+}
+/* /メールアドレス */
+
+/* 電話番号 */
+.client-phone-number {
+  padding: 2vh 0;
+}
+/* /電話番号 */
+
+
+/* 説明文 */
+.description-text {
+  width: 100%;
+  height: 200px;
+  padding: 16px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  resize: none;
+}
+
+.description {
+  margin-top: 2vh;
+}
+/* /説明文 */
+
+
+
+/* 下部ボタン */
+.card-post-btn {
+  width: 100%;
   text-align: center;
 }
+
+.card-red-btn {
+  background: linear-gradient(90deg, rgb(22, 135, 237), rgb(20, 55, 90));
+  color: #fff;
+  width: 100%;
+  height: 50px;
+  font-size: 14px;
+  margin-bottom: 4vh;
+  margin-top: 4vh;
+
+}
+/* /下部ボタン */

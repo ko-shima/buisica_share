@@ -1,9 +1,94 @@
 <div class="card-post-contents">
   <header class="card-post-header">
-    <%= link_to image_tag("buisica_share_logo.png", class:"buisica-icon"), "/" %>
+    <%= link_to image_tag("buisica_share_logo.png", class: "buisica-icon", size: '185x50'), "/" %>
   </header>
 
+  <div class="card-post-main">
+    <h2 class="card-post-title">新規名刺情報を入力</h2>
+    <%= form_with model: @card, data: { turbo: false }, local: true do |f| %>
+      <%# render 'shared/error_messages', model: f.object %>
+      
+      <%# 名刺画像 %>
+      <div class="img-upload">
+        <div class="weight-bold-text">
+          名刺画像
+          <span class="indispensable">必須</span>
+        </div>
+        <div class="click-upload">
+          <p>
+            クリックしてファイルをアップロード
+          </p>
+          <%= f.file_field :image, id: "card-image" %>
+        </div>
+      </div>
+      <%# /名刺画像 %>
+
+    <%# 会社名 %>
+    <div class="client-company-name">
+      <div class="weight-bold-text">
+        顧客・取引先の会社名
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :company_name, class:"cards-text", id:"company-name", placeholder:"正式名称で入力" %>
+    </div>
+    <%# /会社名 %>
+
+    <%# 部署名 %>
+    <div class="client-department">
+      <div class="weight-bold-text">
+        部署名
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :client_department, class:"cards-text", id:"client-department" , placeholder:"〇〇部 ××課"%>
+    </div>
+    <%# /部署名 %>
 
 
+    <%# 先方担当者氏名 %>
+    <div class="client-name">
+      <div class="weight-bold-text">
+        氏名
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="client-name-form">  
+        <%= f.text_area :client_last_name, class:"cards-text", id:"card-last-name", placeholder:"姓" %>
+        <%= f.text_area :client_first_name, class:"cards-text", id:"card-last-name", placeholder:"名" %>
+      </div>
+    </div>
+    <%# /先方担当者氏名 %>
 
+    <%# Mail %>
+    <div class="client-email">
+      <div class="weight-bold-text">
+        メールアドレス
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :client_email, class:"cards-text", id:"client-email" %>
+    </div>
+    <%# /Mail %>
+
+    <%# Tel %>
+    <div class="client-phone-number">
+      <div class="weight-bold-text">
+        電話番号
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :client_phone_number, class:"cards-text", id:"client-phone-number", placeholder:"ハイフンなしで入力" %>
+    </div>
+    <%# /Tel %>
+
+    <%# 説明文 %>
+    <div class="description">
+      <div class="weight-bold-text">
+        補足説明
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :description, class:"description-text", id:"description", placeholder:"名刺交換時のイベント名・案件名など簡易的に入力する" %>
+    </div>
+    <%# /説明文 %>
+      <div class='card-post-btn'>
+        <%= f.submit "名刺の登録" ,class:"card-red-btn", id:"button" %>
+      </div>
+    <% end %>
+  </div>
 </div>
