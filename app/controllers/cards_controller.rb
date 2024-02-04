@@ -1,8 +1,9 @@
 class CardsController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create, :edit, :destroy]
   before_action :set_item, only: [:edit, :show, :update, :destroy]
 
   def index
-    @cards = Card.all
+    @cards = Card.all.order('created_at DESC')
   end
 
   def new
