@@ -67,7 +67,7 @@ table tr:nth-child(odd){
   text-align: center; /* ボタンを中央揃え */
 }
 
-.post-dlt-btn, .post-edt-btn, .post-class-btn {
+.post-dlt-btn, .post-edt-btn {
   padding: 5px;
   width: 180px; /* ボタンの幅を調整してください */
   background-color: rgba(38, 214, 217, 0.427);
@@ -77,4 +77,27 @@ table tr:nth-child(odd){
   text-align: center; /* テキストを中央揃え */
   margin: 0 100px 0; /* ボタンの間隔を調整してください */
   display: inline-block; /* ボタンを横並びにする */
+}
+
+.post-class {
+  text-align: center; /* テキストを中央揃え */
+  margin: 20px auto; /* 上下の中央揃え */
+}
+
+.post-class h3 {
+  margin-bottom: 10px; /* h3要素の下部に余白を追加 */
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.post-class-btn {
+  padding: 5px;
+  width: 180px;
+  background-color: rgba(38, 214, 217, 0.427);
+  border: 6px outset #051857;
+  color: black;
+  font-size: 24px;
+  text-align: center;
+  margin: 0 auto; /* 左右の余白を自動で調整して中央に配置 */
+  display: block; /* ブロック要素に変更 */
 }
