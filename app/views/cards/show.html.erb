@@ -1,0 +1,60 @@
+<%= render "shared/header" %> 
+
+ <%# 名刺詳細 %>
+  <div class='card-contents'>
+    <h2 class='title'>詳細ページ</h2>
+    <div class="card-title-name">
+      <%= @card.company_name%><br />
+      <%= @card.client_last_name + "さま"%>
+    </div>
+  </div>
+
+  <div class="card-img-content">
+      <%= image_tag @card.image.variant(resize: '300x300'),class:"card-box-img" %>
+  </div>
+
+
+  <table class="detail-table">
+    <tbody>
+      <tr>
+        <th class="detail-card">担当者名</th>
+        <td class="detail-value"><%= @card.client_last_name + @card.client_first_name + "さま" %></td>
+      </tr>
+      <tr>
+        <th class="detail-card">会社名</th>
+        <td class="detail-value"><%= @card.company_name %></td>
+      </tr>
+      <tr>
+        <th class="detail-card">所属部署</th>
+        <td class="detail-value"><%= @card.client_department %></td>
+      </tr>
+      <tr>
+        <th class="detail-card">連絡先（メールアドレス）</th>
+        <td class="detail-value"><%= @card.client_email %></td>
+      </tr>
+      <tr>
+        <th class="detail-card">連絡先（電話番号）</th>
+        <td class="detail-value"><%= @card.client_phone_number %></td>
+      </tr>
+    </tbody>
+  </table>  
+
+  <div class="card-explain-box">
+      <span><%= @card.description %></span>
+  </div>
+  <%# /名刺詳細 %>
+
+  <% if current_user.id == @card.user_id%>
+    <div class="post-edit">
+        <%= link_to "編集", edit_card_path(@card.id), method: :get, class: "post-edt-btn" %>
+        <%= link_to "削除", card_path(@card.id), data: { turbo_method: :delete }, class:"post-dlt-btn" %>
+    </div>
+  <% else %>
+    <div class="post-class">
+      <h3>投稿者</h3>
+      投稿者の連絡先は下のボタンをクリック
+      <div class="post-class-btn">
+        <%= link_to @card.user.department.name + "　" + @card.user.last_name, "#" %>
+      </div>
+    </div>
+  <% end %>
