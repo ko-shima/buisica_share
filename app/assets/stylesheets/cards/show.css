@@ -49,7 +49,6 @@ table tr:nth-child(odd){
 .post-edt-btn {
   background-color: #ea352d;
   font-size: 18px;
-  font-weight: bold;
   color: #FFF;
   margin: 20px auto; /* 上下の中央揃え */
   padding: 2vh 10vw;
@@ -59,29 +58,23 @@ table tr:nth-child(odd){
 .or-text {
   margin: 20px 0 20px;
   text-align: center;
+  font-size: 24px;
 }
 
-.post-dlt-btn {
-  margin: 0px auto;    /* 上下3px 左右auto */
-  padding: 5px;
-  width: 25%;
-  background-color: rgb(38, 217, 38);
-  border: 6px outset #055721;
-  text-align: center;
+.post-edit {
+  width: fit-content; /* コンテンツ幅に合わせる */
   margin: 20px auto; /* 上下の中央揃え */
+  text-align: center; /* ボタンを中央揃え */
 }
 
-.post-class {
-  width: 50%;
-  height: 200px;
-  margin: 20px auto 0px;    /* 上下3px 左右auto */
-  text-align: center;
-}
-
-.post-class-btn {
-  margin: 0px auto;    /* 上下3px 左右auto */
+.post-dlt-btn, .post-edt-btn, .post-class-btn {
   padding: 5px;
-  width: 25%;
-  background-color: rgb(38, 217, 38);
-  border: 6px outset #055721;
+  width: 180px; /* ボタンの幅を調整してください */
+  background-color: rgba(38, 214, 217, 0.427);
+  border: 6px outset #051857;
+  color: black;
+  font-size: 24px;
+  text-align: center; /* テキストを中央揃え */
+  margin: 0 100px 0; /* ボタンの間隔を調整してください */
+  display: inline-block; /* ボタンを横並びにする */
 }
