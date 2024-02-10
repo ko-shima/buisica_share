@@ -27,6 +27,19 @@ class CardsController < ApplicationController
   def edit
   end
 
+  def update
+    if @card.update(card_params)
+      redirect_to card_path(@card)
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    @card.destroy
+    redirect_to root_path
+  end
+
   private
 
   def card_params
