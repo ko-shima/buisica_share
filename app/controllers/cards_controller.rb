@@ -10,11 +10,7 @@ class CardsController < ApplicationController
     @card = Card.new
   end
 
-  def show
-  end
 
-  def edit
-  end
 
   def create
     @card = Card.new(card_params)
@@ -23,6 +19,12 @@ class CardsController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+  end
+  
+  def show
+  end
+
+  def edit
   end
 
   private
