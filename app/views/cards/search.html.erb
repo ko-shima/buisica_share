@@ -1,0 +1,23 @@
+<%= render "shared/header"%> 
+
+
+  <% @cards.each do |card| %>
+    <%= link_to card_path(card.id) do %>
+      <div class='card-img-content'>
+        <%= image_tag card.image.variant(resize: '250x250'), class: "card-img" if card.image.attached? %>
+      </div>
+      <div class='card-info'>
+        <h3 class='card-name'>
+          <%= card.client_last_name + "さま" %>
+        </h3>
+        <div class='company-name'>
+          <%= card.company_name %>
+        </div>
+      </div>
+    <% end %>
+    <div class='post-name'>
+      <%= "投稿者：" + card.user.last_name %>
+    </div>
+  </li>
+  <% end %>
+</div>
