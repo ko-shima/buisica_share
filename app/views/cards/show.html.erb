@@ -54,7 +54,7 @@
       <h3>投稿者</h3>
       投稿者の連絡先は下のボタンをクリック
       <div class="post-class-btn">
-        <%= link_to @card.user.department.name + "　" + @card.user.last_name, "#" %>
+        <%= link_to @card.user.department.name + "　" + @card.user.last_name, "/users/#{@card.user.id}" %>
       </div>
     </div>
   <% end %>
