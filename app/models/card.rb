@@ -13,4 +13,12 @@ class Card < ApplicationRecord
     validates :user_id
     validates :image
   end
+
+  def self.search(search)
+    if search != ""
+      Card.where('client_last_name LIKE ? OR company_name LIKE ?', "%#{search}%", "%#{search}%")
+    else
+      Card.all
+    end
+  end
 end
