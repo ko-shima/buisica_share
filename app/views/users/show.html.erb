@@ -1,0 +1,61 @@
+<%= render "shared/header" %> 
+
+
+<div class="card-contents">
+    <h2 class="title"><%= @user.department.name + " " + @user.last_name + " "%>さんのマイページ</h2>
+
+  <table class="detail-table">
+    <tbody>
+      <tr>
+        <th class="detail-card">担当者名</th>
+        <td class="detail-value"><%= @user.last_name + "　" + @user.first_name %></td>
+      </tr>
+      <tr>
+        <th class="detail-card">部署</th>
+        <td class="detail-value"><%= @user.department.name %></td>
+      </tr>
+      <tr>
+        <th class="detail-card">連絡先（メールアドレス）</th>
+        <td class="detail-value"><%= @user.email %></td>
+      </tr>
+      <tr>
+        <th class="detail-card">連絡先（電話番号）</th>
+        <td class="detail-value"><%= @user.phone_number %></td>
+      </tr>
+    </tbody>
+  </table>  
+
+  <div class="title">
+    <h2>投稿一覧</h2>
+  </div>
+
+<div>
+  <ul class='card-lists'>
+    <% @cards.each do |card| %>
+      <li class='list'>
+        <%= link_to card_path(card.id) do %>
+          <div class='card-img-content'>
+            <%= image_tag card.image.variant(resize: '250x250'), class: "card-img" if card.image.attached? %>
+          </div>
+          <div class='card-info'>
+            <h3 class='card-name'>
+              <%= card.client_last_name + "さま" %>
+            </h3>
+            <div class='company-name'>
+              <%= card.company_name %>
+            </div>
+          </div>
+        <% end %>
+        <div class='post-name'>
+          <%= "投稿者：" + card.user.last_name %>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+
+
+</div>
+
+
+
+

@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!
+
   def show
-    @cards = current_user.cards
+    @user = User.find(params[:id])
+    @cards = @user.cards 
   end
 end
