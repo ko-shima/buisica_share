@@ -1,5 +1,5 @@
 class CardsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create, :edit, :destroy]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :destroy, :show]
   before_action :set_item, only: [:edit, :show, :update, :destroy]
   before_action :move_to_index, only: [:edit, :destroy]
 
@@ -24,6 +24,8 @@ class CardsController < ApplicationController
   end
   
   def show
+    @comment = Comment.new
+    @comments = @card.comments.includes(:user)
   end
 
   def edit

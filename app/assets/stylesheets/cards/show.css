@@ -101,3 +101,51 @@ table tr:nth-child(odd){
   margin: 0 auto; /* 左右の余白を自動で調整して中央に配置 */
   display: block; /* ブロック要素に変更 */
 }
+
+.container {
+  width: 100%;
+  margin: 20px 0;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
+  background-color: white;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.container-text-box textarea {
+  width: 500px;
+  height: 150px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.container-post-btn {
+  width: 100%;
+  text-align: center;
+}
+
+.container h4 {
+  margin: 0 0 20px;
+  text-align: center;
+  font-weight: normal;
+  font-size: 20px;
+  color: #666;
+}
+
+.comments {
+  padding: 5px;
+  margin-top: 15px;
+  width: 100%;
+  text-align: left;
+}
+
+.comments a {
+  color:rgb(4, 87, 36)
+}
+
+.comments a:hover {
+  text-decoration: underline;
+}
